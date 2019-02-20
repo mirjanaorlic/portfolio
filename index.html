@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mirjana Orlic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header__wrapper">
+            <div class="header__box header--box1">
+                <p class="header__name">MIRJANA ORLIC</p>
+                <p>FrontEndWebDev</p>
+            </div>
+           
+            <div class="header__box header--box2">
+               <div class="header__circle-text">
+                <circle cx="40" cy="40" r="40" />
+                <svg viewBox="0 0 200 200">
+                    <path id="curve" fill="transparent"
+                    d="
+                    M 100, 100
+                    m -75, 0
+                    a 75,75 0 1,0 150,0
+                    a 75,75 0 1,0 -150,0
+                    "/>
+                    <text width="40" heght="40" class="text">
+                        <textPath xlink:href="#curve" style="letter-spacing: .5px;"> I cant get a job cause I cant get experience cause 
+                        </textPath>
+                    </text>
+                </svg>
+               </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Main -->
+
+    <main>
+       <div class="main__wrapper">
+
+        <!-- Work -->
+            <div class="main__box" id="main__work" onclick="remove('main__bio', 'main__contact')">
+                <h4 class="work__heading">W</h4>
+                <div class="main__work--hidden">
+                    <h4 class="work__heading--hidden">WORKS</h4>
+                    <ul>
+                        <li>
+                            <a href="https://mirjanaorlic.github.io/psiholog-olgica-vucenov/" target="_blank">Psiholog Olgica Vučenov</a>: Front-end web development for private practice website. 
+                        </li>
+                        <li> 
+                            <a href="https://mirjanaorlic.github.io/petar-peric-portfolio/" target="_blank">Petar Peric</a>:  Graphic Design Portfolio.   
+                        </li>
+                        <li> 
+                            <a href="https://mirjanaorlic.github.io/milakovach/" target="_blank">MILAKOVACH</a>: A small project with shapes made with pure css.  
+                        </li>
+                        <li> 
+                            <a href="https://mirjanaorlic.github.io/tardis/" target="_blank">Tardis</a>: A small css animation project.    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="main__box" id="main__bio" onclick="remove('main__work', 'main__contact')">
+                <h4 class="bio__heading">B</h4>
+                <div class="main__bio--hidden">
+                        <h4 class="bio__heading--hidden">BIO</h4>
+                        <p> Non-formal education: </p>
+                        <ul>
+                            <li>Front-end web development –  <a href="http://ftninformatika.com/" target=”_blank”>FTN informatika</a> (April – July 2018.):</li>
+                                <ul>
+                                    <li>HTML 5, CSS 3, SASS, Git</li>
+                                    <li>JavaScript, TypeScript</li>
+                                    <li>Angular 6</li>
+                                </ul>
+                                <br>
+                            <li> Basic programming – FTN informatika (December 2017 – February 2018.): </li>
+                                <ul>
+                                    <li> Basics of Java programming language and object-oriented programming  </li>
+                                </ul>
+                                <br>
+                            <li> <a href="https://www.udemy.com/" target="_blank"> Udemy</a> (from 2017.)</li>
+                            <br>
+                            <li> Online Marketing Course - <a href="http://prevent.org.rs/" target=”_blank”>Association Prevent</a> and <a href="https://homepage.rs/" target=”_blank”>Homepage</a>  (January - April 2017.)</li>
+                        </ul>
+                        <br>
+                        <p> Formal education: </p>
+                        <ul>
+                            <li>University of Novi Sad, Faculty of Philosophy</li>
+                            <ul>
+                                <li> Master of Pedagogy (2014 – 2015)  </li>
+                                <li> Bachelor of Pedagogy (2007 – 2013) </li>
+                            </ul>
+                        </ul>                 
+                        <p>Work experience: </p>
+                        <ul>
+                            <li><a href="http://prevent.org.rs/" target=”_blank”> Association Prevent</a> (December 2016 – November 2018. ): Promotion of the association through social networks, websites, and other media; administrative duties; assistance in project management, but also project coordination.</li>
+                            <br>
+                           
+                            <li><a href="http://www.nshc.org.rs/" target=”_blank”>Novi Sad Humanitarian Centre, </a>(December 2015 – November 2016.), <a href="http://www.tdh.ch/en" target=”_blank”>Terre des hommes</a> and <a href="https://www.rescue.org/" target=”_blank”>International Rescue Committee </a>: Provision of protection, information, material and psychological support to refugees from Syria, Afghanistan, Iraq and other countries in the field.</li>
+                            <br>
+                            <li> Primary school "Branko Radičević" Odžaci (September – November 2015.): Pedagogue - Expert Associate</li>
+                            <br>
+                            <li> Centre for social work Odžaci (August  2014 – August 2015.): Case manager – Intern</li>
+                            <br>
+                        </ul>
+                        <p>Languages: </p>     
+                        <ul>
+                            <li>Serbian - native</li>
+                            <li>English – B2</li>
+                            <li>German - basics</li>
+                        </ul>     
+                        <p> Personal characteristics: </p>
+                        <ul>
+                            <li>Responsible, organized and reliable.</li>
+                            <li>Logical mindset.</li>
+                            <li>Determined and enthusiastic. </li>
+                        </ul>   
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="main__box" id="main__contact" onclick="remove('main__bio', 'main__work')">
+                <h4 class="contact__heading">C</h4>
+                <div class="main__contact--hidden">
+                    <h4 class="contact__heading--hidden">CONTACT</h4>
+                    <p>linkedin: <a href="https://www.linkedin.com/in/mirjanaorlic/" target="_blank"> mirjanaorlic </a></p>
+                    <p>github: <a href="https://github.com/mirjanaorlic" target="_blank">mirjanaorlic</a></p>
+                    <p>phone: +38164/3212558</p>
+                    <p>skype: mirjanaorlic</p>
+                    <p>address: Novi Sad</p>
+                    <p>e-mail: mirjana.orlic4@gmail.com
+                </div>
+            </div>
+       </div>
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
