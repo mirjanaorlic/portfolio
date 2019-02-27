@@ -29,6 +29,8 @@ body {
     .header__wrapper .header__box .header__name {
       padding-top: 1rem;
       padding-left: 1rem; }
+    .header__wrapper .header__box .header__description {
+      letter-spacing: 1.5px; }
     .header__wrapper .header__box p {
       padding-left: 1rem; }
     .header__wrapper .header__box .header__circle-text {
