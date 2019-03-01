@@ -213,11 +213,24 @@ body {
                 margin-left: 1.5rem;
                 // margin-bottom: 1rem;
             }
+
+            .image {
+                width: 150px;
+                display: none;
+            }
+
+            p.email:hover + img { 
+                display: block;
+             }
+             
+
+
         }
 
         .contact__heading {
             display: none;
         }
+
     }  
 }
 

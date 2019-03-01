@@ -136,6 +136,11 @@ body {
         font-size: 2.8rem; }
       .main__wrapper #main__contact.is-active .main__contact--hidden p {
         margin-left: 1.5rem; }
+      .main__wrapper #main__contact.is-active .main__contact--hidden .image {
+        width: 150px;
+        display: none; }
+      .main__wrapper #main__contact.is-active .main__contact--hidden p.email:hover + img {
+        display: block; }
     .main__wrapper #main__contact.is-active .contact__heading {
       display: none; }
 
