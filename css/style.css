@@ -70,77 +70,77 @@ body {
     height: 100%;
     font-size: 2.8rem;
     cursor: pointer; }
-  .main #main-work {
+  .main .main-work {
     position: relative;
     transition: width 400ms;
     border-right: 1px solid #000; }
-    .main #main-work .heading {
+    .main .main-work .heading {
       display: block; }
-    .main #main-work .work-hidden {
+    .main .main-work .work-hidden {
       display: none; }
-  .main #main-work.is-active {
+  .main .main-work.is-active {
     width: 180%; }
-    .main #main-work.is-active .letter {
+    .main .main-work.is-active .letter {
       display: none; }
-    .main #main-work.is-active .work-hidden {
+    .main .main-work.is-active .work-hidden {
       display: block;
       font-size: 1.5rem; }
-      .main #main-work.is-active .work-hidden .heading {
+      .main .main-work.is-active .work-hidden .heading {
         display: block; }
-      .main #main-work.is-active .work-hidden .list-item {
+      .main .main-work.is-active .work-hidden .list-item {
         margin-bottom: 1.5rem; }
-      .main #main-work.is-active .work-hidden .github-logo {
+      .main .main-work.is-active .work-hidden .github-logo {
         width: 15px; }
-  .main #main-bio {
+  .main .main-bio {
     position: relative;
     transition: width 400ms;
     border-right: 1px solid #000; }
-    .main #main-bio .heading {
+    .main .main-bio .heading {
       display: block; }
-    .main #main-bio .bio-hidden {
+    .main .main-bio .bio-hidden {
       display: none; }
-  .main #main-bio.is-active {
+  .main .main-bio.is-active {
     width: 180%; }
-    .main #main-bio.is-active .letter {
+    .main .main-bio.is-active .letter {
       display: none; }
-    .main #main-bio.is-active .bio-hidden {
+    .main .main-bio.is-active .bio-hidden {
       display: block;
       font-size: 1.5rem;
       width: 100%;
       height: 100%;
       overflow-x: hidden;
       overflow-y: scroll; }
-      .main #main-bio.is-active .bio-hidden::-webkit-scrollbar {
+      .main .main-bio.is-active .bio-hidden::-webkit-scrollbar {
         width: 0px;
         background: transparent; }
-      .main #main-bio.is-active .bio-hidden .heading {
+      .main .main-bio.is-active .bio-hidden .heading {
         display: block; }
-      .main #main-bio.is-active .bio-hidden .list-item {
+      .main .main-bio.is-active .bio-hidden .list-item {
         margin-bottom: .5rem; }
-  .main #main-contact {
+  .main .main-contact {
     transition: width 400ms; }
-    .main #main-contact .letter {
+    .main .main-contact .letter {
       display: block; }
-    .main #main-contact .contact-hidden {
+    .main .main-contact .contact-hidden {
       display: none; }
-  .main #main-contact.is-active {
+  .main .main-contact.is-active {
     width: 180%; }
-    .main #main-contact.is-active .letter {
+    .main .main-contact.is-active .letter {
       display: none; }
-    .main #main-contact.is-active .contact-hidden {
+    .main .main-contact.is-active .contact-hidden {
       display: block;
       font-size: 1.5rem; }
-      .main #main-contact.is-active .contact-hidden .heading {
+      .main .main-contact.is-active .contact-hidden .heading {
         display: block;
         font-size: 2.8rem; }
-      .main #main-contact.is-active .contact-hidden .list-item {
+      .main .main-contact.is-active .contact-hidden .list-item {
         margin-bottom: .3rem; }
-      .main #main-contact.is-active .contact-hidden .my-image {
+      .main .main-contact.is-active .contact-hidden .my-image {
         width: 150px;
         display: none; }
-      .main #main-contact.is-active .contact-hidden .email:hover + img {
+      .main .main-contact.is-active .contact-hidden .email:hover + img {
         display: block; }
-    .main #main-contact.is-active .heading {
+    .main .main-contact.is-active .heading {
       display: none; }
 
 @media screen and (max-width: 1440px) {
@@ -163,15 +163,15 @@ body {
     flex-direction: column;
     align-items: flex-start;
     width: 100%; }
-    .main #main-work {
+    .main .main-work {
       border-right: none; }
-    .main #main-work.is-active {
+    .main .main-work.is-active {
       width: 100%; }
-    .main #main-bio {
+    .main .main-bio {
       border-right: none; }
-    .main #main-bio.is-active {
+    .main .main-bio.is-active {
       width: 100%; }
-    .main #main-contact.is-active {
+    .main .main-contact.is-active {
       width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

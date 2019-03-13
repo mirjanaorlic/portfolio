@@ -73,7 +73,7 @@ body {
         cursor: pointer;
     }
     // Work
-    #main-work {
+    .main-work {
         position: relative;
         transition: width 400ms;
         border-right: 1px solid $main_color;
@@ -84,7 +84,7 @@ body {
               display: none;              
         }         
     }
-    #main-work.is-active {
+    .main-work.is-active {
         width: 180%;
         .letter {
           display: none;
@@ -104,7 +104,7 @@ body {
         }
     }
     // Bio
-    #main-bio {
+    .main-bio {
         position: relative;
         transition: width 400ms;
         border-right: 1px solid $main_color;
@@ -115,7 +115,7 @@ body {
             display: none;
         }
     }
-    #main-bio.is-active {
+    .main-bio.is-active {
         width: 180%;  
         .letter {
             display: none;
@@ -141,7 +141,7 @@ body {
         }       
     }
     // Contact
-    #main-contact {
+    .main-contact {
         transition: width 400ms;
         .letter {
             display: block;
@@ -150,7 +150,7 @@ body {
             display: none;
         }
     }
-    #main-contact.is-active {
+    .main-contact.is-active {
         width: 180%;
         .letter {
             display: none;
@@ -206,19 +206,19 @@ body {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        #main-work {
+        .main-work {
             border-right: none;
         }    
-        #main-work.is-active {
+        .main-work.is-active {
             width: 100%;
         }
-        #main-bio {
+        .main-bio {
             border-right: none;
         }   
-        #main-bio.is-active {
+        .main-bio.is-active {
             width: 100%;  
         }   
-        #main-contact.is-active {
+        .main-contact.is-active {
             width: 100%;
         }
     
