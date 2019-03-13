@@ -15,25 +15,23 @@ body {
   height: 100vh;
   width: 100%; }
 
-.header__wrapper {
+.header {
   font-size: 1.1rem;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   height: 40vh; }
-  .header__wrapper .header__name {
-    font-size: 1.62rem; }
-  .header__wrapper .header__box {
+  .header .header__name {
+    font-size: 1.62rem;
+    padding-top: 1rem;
+    padding-left: 1rem; }
+  .header .header__description {
+    letter-spacing: 1.5px;
+    padding-left: 1rem; }
+  .header .header-box {
     width: 25%; }
-    .header__wrapper .header__box .header__name {
-      padding-top: 1rem;
-      padding-left: 1rem; }
-    .header__wrapper .header__box .header__description {
-      letter-spacing: 1.5px; }
-    .header__wrapper .header__box p {
-      padding-left: 1rem; }
-    .header__wrapper .header__box .header__circle-text {
+    .header .header-box .circle-text {
       max-width: 300px;
       -webkit-animation-iteration-count: infinite;
       -webkit-animation-timing-function: linear;
@@ -53,130 +51,127 @@ body {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-.main__wrapper {
+.main {
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 60vh;
   border-top: 1px solid #000; }
-  .main__wrapper .main__box {
+  .main .list-item {
+    margin-left: 1.5rem;
+    list-style: none; }
+  .main .letter, .main .heading {
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem; }
+  .main .main-box {
     width: 33.3%;
     height: 100%;
     font-size: 2.8rem;
     cursor: pointer; }
-    .main__wrapper .main__box h4 {
-      padding: 1rem 1.5rem; }
-  .main__wrapper #main__work {
+  .main #main-work {
     position: relative;
     transition: width 400ms;
     border-right: 1px solid #000; }
-    .main__wrapper #main__work .work__heading {
+    .main #main-work .heading {
       display: block; }
-    .main__wrapper #main__work .main__work--hidden {
+    .main #main-work .work-hidden {
       display: none; }
-  .main__wrapper #main__work.is-active {
+  .main #main-work.is-active {
     width: 180%; }
-    .main__wrapper #main__work.is-active .work__heading {
+    .main #main-work.is-active .letter {
       display: none; }
-    .main__wrapper #main__work.is-active .main__work--hidden {
+    .main #main-work.is-active .work-hidden {
       display: block;
       font-size: 1.5rem; }
-      .main__wrapper #main__work.is-active .main__work--hidden .work__heading--hidden {
-        display: block;
-        font-size: 2.8rem; }
-      .main__wrapper #main__work.is-active .main__work--hidden li {
-        margin-left: 1.5rem;
-        margin-bottom: 1.5rem;
-        list-style: none; }
-      .main__wrapper #main__work.is-active .main__work--hidden .github-logo {
+      .main #main-work.is-active .work-hidden .heading {
+        display: block; }
+      .main #main-work.is-active .work-hidden .list-item {
+        margin-bottom: 1.5rem; }
+      .main #main-work.is-active .work-hidden .github-logo {
         width: 15px; }
-  .main__wrapper #main__bio {
+  .main #main-bio {
     position: relative;
     transition: width 400ms;
     border-right: 1px solid #000; }
-    .main__wrapper #main__bio .bio__heading {
+    .main #main-bio .heading {
       display: block; }
-    .main__wrapper #main__bio .main__bio--hidden {
+    .main #main-bio .bio-hidden {
       display: none; }
-  .main__wrapper #main__bio.is-active {
+  .main #main-bio.is-active {
     width: 180%; }
-    .main__wrapper #main__bio.is-active .bio__heading {
+    .main #main-bio.is-active .letter {
       display: none; }
-    .main__wrapper #main__bio.is-active .main__bio--hidden {
+    .main #main-bio.is-active .bio-hidden {
       display: block;
       font-size: 1.5rem;
       width: 100%;
       height: 100%;
       overflow-x: hidden;
       overflow-y: scroll; }
-      .main__wrapper #main__bio.is-active .main__bio--hidden::-webkit-scrollbar {
+      .main #main-bio.is-active .bio-hidden::-webkit-scrollbar {
         width: 0px;
         background: transparent; }
-      .main__wrapper #main__bio.is-active .main__bio--hidden .bio__heading--hidden {
-        display: block;
-        font-size: 2.8rem; }
-      .main__wrapper #main__bio.is-active .main__bio--hidden p {
-        margin: 1rem 0 1.5rem 1.5rem; }
-      .main__wrapper #main__bio.is-active .main__bio--hidden li {
-        margin-left: 1.5rem;
-        list-style: none; }
-  .main__wrapper #main__contact {
+      .main #main-bio.is-active .bio-hidden .heading {
+        display: block; }
+      .main #main-bio.is-active .bio-hidden .list-item {
+        margin-bottom: .5rem; }
+  .main #main-contact {
     transition: width 400ms; }
-    .main__wrapper #main__contact .contact__heading {
+    .main #main-contact .letter {
       display: block; }
-    .main__wrapper #main__contact .main__contact--hidden {
+    .main #main-contact .contact-hidden {
       display: none; }
-  .main__wrapper #main__contact.is-active {
+  .main #main-contact.is-active {
     width: 180%; }
-    .main__wrapper #main__contact.is-active .main__contact--hidden {
+    .main #main-contact.is-active .letter {
+      display: none; }
+    .main #main-contact.is-active .contact-hidden {
       display: block;
       font-size: 1.5rem; }
-      .main__wrapper #main__contact.is-active .main__contact--hidden .contact__heading--hidden {
+      .main #main-contact.is-active .contact-hidden .heading {
         display: block;
         font-size: 2.8rem; }
-      .main__wrapper #main__contact.is-active .main__contact--hidden p {
-        margin-left: 1.5rem; }
-      .main__wrapper #main__contact.is-active .main__contact--hidden .image {
+      .main #main-contact.is-active .contact-hidden .list-item {
+        margin-bottom: .3rem; }
+      .main #main-contact.is-active .contact-hidden .my-image {
         width: 150px;
         display: none; }
-      .main__wrapper #main__contact.is-active .main__contact--hidden p.email:hover + img {
+      .main #main-contact.is-active .contact-hidden .email:hover + img {
         display: block; }
-    .main__wrapper #main__contact.is-active .contact__heading {
+    .main #main-contact.is-active .heading {
       display: none; }
 
 @media screen and (max-width: 1440px) {
   .header__wrapper .header__box {
     width: 27%; } }
 @media screen and (max-width: 500px) {
-  .header__wrapper {
+  .header {
     height: auto;
     flex-direction: column;
     align-items: center; }
-    .header__wrapper .header__box {
+    .header .header-box {
       text-align: center;
       width: 50%; }
-      .header__wrapper .header__box .header__box1 {
-        margin-top: 1rem; }
-      .header__wrapper .header__box .header__box2 {
-        margin: 0; }
-      .header__wrapper .header__box .header__circle-text {
+      .header .header-box .circle-text {
         max-width: 200px;
         margin-left: 10%; }
 
-  .main__wrapper {
+  .main {
     height: auto;
     flex-direction: column;
     align-items: flex-start;
     width: 100%; }
-    .main__wrapper #main__work {
+    .main #main-work {
       border-right: none; }
-    .main__wrapper #main__work.is-active {
+    .main #main-work.is-active {
       width: 100%; }
-    .main__wrapper #main__bio {
+    .main #main-bio {
       border-right: none; }
-    .main__wrapper #main__bio.is-active {
+    .main #main-bio.is-active {
       width: 100%; }
-    .main__wrapper #main__contact.is-active {
+    .main #main-contact.is-active {
       width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
