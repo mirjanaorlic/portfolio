@@ -16,16 +16,24 @@ body {
   width: 100%; }
 
 .header {
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 40vh; }
+  height: 40vh;
+  cursor: url(../cursor.png), auto; }
   .header .header__name {
     font-size: 1.62rem;
     padding-top: 1rem;
-    padding-left: 1rem; }
+    padding-left: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 15rem;
+    animation: show 4s steps(60, end); }
+@keyframes show {
+  from {
+    width: 0; } }
   .header .header__description {
     letter-spacing: 1.5px;
     padding-left: 1rem; }
@@ -41,22 +49,25 @@ body {
       animation-timing-function: linear;
       animation-name: orbit;
       animation-duration: 10s; }
+      .header .header-box .circle-text:hover {
+        animation: orbit-dif 10s infinite linear; }
 @-webkit-keyframes orbit {
   from {
     -webkit-transform: rotate(0deg); }
   to {
     -webkit-transform: rotate(360deg); } }
-@keyframes orbit {
+@keyframes orbit-dif {
   from {
-    transform: rotate(0deg); }
+    transform: rotate(360deg); }
   to {
-    transform: rotate(360deg); } }
+    transform: rotate(0deg); } }
 .main {
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 60vh;
-  border-top: 1px solid #000; }
+  border-top: 1px solid #000;
+  cursor: url(../cursor.png), auto; }
   .main .list-item {
     margin-left: 1.5rem;
     list-style: none; }
@@ -68,8 +79,7 @@ body {
   .main .main-box {
     width: 33.3%;
     height: 100%;
-    font-size: 2.8rem;
-    cursor: pointer; }
+    font-size: 2.8rem; }
   .main .main-work {
     position: relative;
     transition: width 400ms;
