@@ -4,6 +4,7 @@
 html {
     font-size: 14px;
     color: $main_color;
+    cursor: url(../cursor.png), auto;
 }
 
 body {
@@ -18,7 +19,6 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     height: 40vh;
-    cursor: url(../cursor.png), auto;
     .header__name {
         font-size: 1.62rem;
         padding-top: 1rem;
@@ -71,7 +71,6 @@ body {
     justify-content: center;
     height: 60vh;
     border-top: 1px solid $main_color;
-    cursor: url(../cursor.png), auto;
     .list-item {
         margin-left: 1.5rem;  
         list-style: none;
