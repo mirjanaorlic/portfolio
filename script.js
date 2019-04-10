@@ -15,10 +15,5 @@ function remove(a, b) {
     document.querySelector(a).classList.remove("is-active");
     document.querySelector(b).classList.remove("is-active");
 }
-// Animate
-// var headerName = document.querySelector('.header__name');
-// var header = document.querySelector('.header');
-// header.addEventListener('click', function() {
-//     headerName.classList.add('.animate');
-// });
+
 
