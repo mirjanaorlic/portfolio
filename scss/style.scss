@@ -6,7 +6,6 @@ html {
     color: $main_color;
     cursor: url(../cursor.png), auto;
 }
-
 body {
     height: 100vh;
     width: 100%;
@@ -27,7 +26,14 @@ body {
         overflow: hidden;
         width: 15rem;
         animation: show 4s steps(60, end); 
-    }    
+    }   
+    .header__my-image {
+        max-width: 190px;
+        display: none;
+    }
+    .header__name:hover + img { 
+        display: block;
+     } 
     @keyframes show { 
         from { 
             width: 0; 
@@ -63,7 +69,6 @@ body {
         }
     }   
 }
-
 // Main
 .main {
     display: flex;
