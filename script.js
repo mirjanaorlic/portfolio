@@ -16,4 +16,21 @@ function remove(a, b) {
     document.querySelector(b).classList.remove("is-active");
 }
 
+// Change background color on move
 
+
+// document.addEventListener('onmousemove',changeColor); 
+
+
+// function changeColor() {
+//     var  randcol= "";
+//     var allchar="0123456789ABCDEF";
+//     for(var i = 0; i < 6; i++){
+//          randcol += allchar[Math.floor(Math.random()*16)];
+//       }
+//       document.body.style.backgroundColor= "#"+randcol;
+// };
+
+
+// x = event.clientX;
+// y = event.clientY;
