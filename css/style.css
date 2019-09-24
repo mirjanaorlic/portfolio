@@ -153,6 +153,7 @@ body {
         margin-bottom: .3rem; }
       .main .main-contact.is-active .contact-hidden .my-image {
         width: 150px;
+        margin-left: 1.5rem;
         display: none; }
       .main .main-contact.is-active .contact-hidden .email:hover + img {
         display: block; }
