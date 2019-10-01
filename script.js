@@ -16,7 +16,7 @@ function remove(a, b) {
     document.querySelector(b).classList.remove("is-active");
 }
 
-// Change background color on move
+// Change background color on click
 
 document.addEventListener('click', changeColor); 
 
@@ -27,4 +27,5 @@ function changeColor() {
          randcol += allchar[Math.floor(Math.random()*16)];
       }
       document.body.style.backgroundColor= "#"+randcol;
+      console.log(randcol);
 };
