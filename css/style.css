@@ -109,8 +109,6 @@ body {
         display: block; }
       .main .main-work.is-active .work-hidden .list-item {
         margin-bottom: 1.5rem; }
-      .main .main-work.is-active .work-hidden .github-logo {
-        width: 15px; }
   .main .main-bio {
     position: relative;
     transition: width 400ms;

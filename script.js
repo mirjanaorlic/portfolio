@@ -52,10 +52,7 @@ function changeColor() {
     document.body.style.color = fore;
 
     document.getElementById('text').style.fill = fore;
-    // document.getElementsByClassName('main').style.borderTop = fore;
-    // document.getElementsByClassName('main-work').style.borderRight = fore;
-    // document.getElementsByClassName('main-bio').style.borderRight = fore;
-    // document.links.style.color = fore;
+    
     var links = document.links;
     for(var i = 0; i < links.length; i++) {
         document.links[i].style.color = fore;
