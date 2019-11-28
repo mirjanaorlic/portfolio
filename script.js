@@ -18,19 +18,6 @@ function remove(a, b) {
 
 // Change background color on click
 
-document.addEventListener('click', changeColor); 
-
-function changeColor() {
-    var  randcol= "";
-    var allchar="0123456789ABCDEF";
-    for(var i = 0; i < 6; i++){
-         randcol += allchar[Math.floor(Math.random()*16)];
-      }
-      document.body.style.backgroundColor= "#"+randcol;
-      console.log(randcol);
-};
-
-
 var rgb = [255, 0, 0];
 
 document.addEventListener('click', changeColor); 
