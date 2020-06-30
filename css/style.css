@@ -8,7 +8,7 @@
 
 html {
   font-size: 14px;
-  cursor: url(../cursor.png), auto; }
+  cursor: url("../assets/images/cursor.png"), auto; }
 
 body {
   height: 100vh;
@@ -21,6 +21,11 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   height: 40vh; }
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-wrap: wrap;
+      align-items: center;
+      height: auto; } }
   .header .header__name {
     font-size: 1.62rem;
     padding-top: 1rem;
@@ -29,6 +34,9 @@ body {
     overflow: hidden;
     width: 15rem;
     animation: show 4s steps(60, end); }
+    @media screen and (max-width: 768px) {
+      .header .header__name {
+        width: 100%; } }
   .header .header__my-image {
     max-width: 190px;
     display: none; }
@@ -40,20 +48,35 @@ body {
   .header .header__description {
     letter-spacing: 1.5px;
     padding-left: 1rem; }
-  .header .header-box {
-    width: 25%; }
-    .header .header-box .circle-text {
-      max-width: 300px;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-      -webkit-animation-name: orbit;
-      -webkit-animation-duration: 10s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      animation-name: orbit;
-      animation-duration: 10s; }
-      .header .header-box .circle-text:hover {
-        animation: orbit-dif 10s infinite linear; }
+  .header .header-box--1 {
+    flex-basis: 85%;
+    max-width: 85%; }
+    @media screen and (max-width: 768px) {
+      .header .header-box--1 {
+        flex-basis: 100%;
+        max-width: 100%; } }
+  .header .header-box--2 {
+    flex-basis: 15%;
+    max-width: 15%; }
+    @media screen and (max-width: 768px) {
+      .header .header-box--2 {
+        flex-basis: 100%;
+        max-width: 100%; } }
+  .header .header-box .circle-text {
+    max-width: 350px;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-name: orbit;
+    -webkit-animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: orbit;
+    animation-duration: 10s; }
+    @media screen and (max-width: 768px) {
+      .header .header-box .circle-text {
+        max-width: 250px; } }
+    .header .header-box .circle-text:hover {
+      animation: orbit-dif 10s infinite linear; }
 @-webkit-keyframes orbit {
   from {
     -webkit-transform: rotate(0deg); }
@@ -66,10 +89,14 @@ body {
     transform: rotate(0deg); } }
 .main {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   height: 60vh;
   border-top: 1px solid; }
+  @media screen and (max-width: 768px) {
+    .main {
+      flex-wrap: wrap;
+      height: auto;
+      justify-content: flex-start; } }
   .main .list-item {
     margin-left: 1.5rem;
     list-style: none; }
@@ -86,6 +113,11 @@ body {
     position: relative;
     transition: width 400ms;
     border-right: 1px solid; }
+    @media screen and (max-width: 768px) {
+      .main .main-work {
+        border-right: none;
+        flex-basis: 100%;
+        max-width: 100%; } }
     .main .main-work .heading {
       display: block; }
     .main .main-work .work-hidden {
@@ -109,16 +141,26 @@ body {
         display: block; }
       .main .main-work.is-active .work-hidden .list-item {
         margin-bottom: 1.5rem; }
+        .main .main-work.is-active .work-hidden .list-item:last-of-type {
+          margin-top: 3.5rem; }
   .main .main-bio {
     position: relative;
     transition: width 400ms;
     border-right: 1px solid; }
+    @media screen and (max-width: 768px) {
+      .main .main-bio {
+        flex-basis: 100%;
+        max-width: 100%; } }
     .main .main-bio .heading {
       display: block; }
     .main .main-bio .bio-hidden {
       display: none; }
   .main .main-bio.is-active {
     width: 180%; }
+    @media screen and (max-width: 768px) {
+      .main .main-bio.is-active {
+        flex-basis: 100%;
+        max-width: 100%; } }
     .main .main-bio.is-active .letter {
       display: none; }
     .main .main-bio.is-active .bio-hidden {
@@ -134,16 +176,26 @@ body {
       .main .main-bio.is-active .bio-hidden .heading {
         display: block; }
       .main .main-bio.is-active .bio-hidden .list-item {
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
         margin-right: 1.5rem; }
+        .main .main-bio.is-active .bio-hidden .list-item:last-of-type {
+          margin-top: 3.5rem; }
   .main .main-contact {
     transition: width 400ms; }
+    @media screen and (max-width: 768px) {
+      .main .main-contact {
+        flex-basis: 100%;
+        max-width: 100%; } }
     .main .main-contact .letter {
       display: block; }
     .main .main-contact .contact-hidden {
       display: none; }
   .main .main-contact.is-active {
     width: 180%; }
+    @media screen and (max-width: 768px) {
+      .main .main-contact.is-active {
+        flex-basis: 100%;
+        max-width: 100%; } }
     .main .main-contact.is-active .letter {
       display: none; }
     .main .main-contact.is-active .contact-hidden {
@@ -162,39 +214,5 @@ body {
         display: block; }
     .main .main-contact.is-active .heading {
       display: none; }
-
-@media screen and (max-width: 1440px) {
-  .header__wrapper .header__box {
-    width: 27%; } }
-@media screen and (max-width: 500px) {
-  .header {
-    height: auto;
-    flex-direction: column;
-    align-items: center; }
-    .header .header__name {
-      padding-left: 0;
-      width: 100%; }
-    .header .header-box {
-      text-align: center;
-      width: 50%; }
-      .header .header-box .circle-text {
-        max-width: 200px;
-        margin-left: 0; }
-
-  .main {
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%; }
-    .main .main-work {
-      border-right: none; }
-    .main .main-work.is-active {
-      width: 100%; }
-    .main .main-bio {
-      border-right: none; }
-    .main .main-bio.is-active {
-      width: 100%; }
-    .main .main-contact.is-active {
-      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

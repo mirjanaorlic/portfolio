@@ -45,9 +45,9 @@ function changeColor() {
         document.links[i].style.color = fore;
     }
 
-    var githubLogo = document.getElementsByClassName('github-logo');
-    for (var i = 0; i < githubLogo.length; i++) {
-        githubLogo[i].style.fill = fore;
-      }
+    // var githubLogo = document.getElementsByClassName('github-logo');
+    // for (var i = 0; i < githubLogo.length; i++) {
+    //     githubLogo[i].style.fill = fore;
+    //   }
     
   }

@@ -3,15 +3,11 @@
 @include main;
 html {
     font-size: 14px;
-    // color: $main_color;
-
-    cursor: url(../cursor.png), auto;
+    cursor: url('../assets/images/cursor.png'), auto;
 }
 body {
     height: 100vh;
     width: 100%;
-    // background-color: #45f2c1;
-    
 }
 // Header
 .header {
@@ -21,6 +17,11 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     height: 40vh;
+    @media screen and(max-width: 768px) {
+       flex-wrap: wrap;
+       align-items: center;
+       height: auto;
+    }
     .header__name {
         font-size: 1.62rem;
         padding-top: 1rem;
@@ -29,6 +30,9 @@ body {
         overflow: hidden;
         width: 15rem;
         animation: show 4s steps(60, end); 
+        @media screen and(max-width: 768px) {
+            width: 100%;
+        } 
     }   
     .header__my-image {
         max-width: 190px;
@@ -46,11 +50,27 @@ body {
         letter-spacing: 1.5px;
         padding-left: 1rem;
     }
-
+    .header-box--1 {
+        flex-basis: 85%;
+        max-width: 85%; 
+        @media screen and(max-width: 768px) {
+            flex-basis: 100%;
+            max-width: 100%; 
+        } 
+    }
+    .header-box--2 {
+        flex-basis: 15%;
+        max-width: 15%;  
+        @media screen and(max-width: 768px) {
+            flex-basis: 100%;
+            max-width: 100%; 
+        } 
+    }
     .header-box {
-        width: 25%;     
+        // flex-basis: 25%;
+        // max-width: 25%;     
         .circle-text {
-            max-width: 300px;
+            max-width: 350px;
             -webkit-animation-iteration-count:infinite;
             -webkit-animation-timing-function:linear;
             -webkit-animation-name:orbit;
@@ -59,6 +79,10 @@ body {
             animation-timing-function:linear;
             animation-name:orbit;
             animation-duration:10s;
+            @media screen and(max-width: 768px) {
+                max-width: 250px;
+            } 
+            
             &:hover {
                 animation: orbit-dif 10s infinite linear;
             }
@@ -77,10 +101,14 @@ body {
 // Main
 .main {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     height: 60vh;
     border-top: 1px solid;
+    @media screen and(max-width: 768px) {
+        flex-wrap: wrap;
+        height: auto;          
+        justify-content: flex-start;
+    } 
     .list-item {
         margin-left: 1.5rem;  
         list-style: none;
@@ -101,11 +129,16 @@ body {
         position: relative;
         transition: width 400ms;
         border-right: 1px solid;
+        @media screen and(max-width: 768px) {
+           border-right: none;
+           flex-basis: 100%;
+           max-width: 100%;
+        } 
         .heading {
             display: block;
         }
           .work-hidden {
-              display: none;              
+            display: none;              
         }         
     }
     .main-work.is-active {
@@ -130,6 +163,9 @@ body {
             }
             .list-item {
                 margin-bottom: 1.5rem;
+                &:last-of-type {
+                    margin-top: 3.5rem;
+                }
             }
         
         }
@@ -139,6 +175,10 @@ body {
         position: relative;
         transition: width 400ms;
         border-right: 1px solid;
+        @media screen and(max-width: 768px) {
+            flex-basis: 100%;
+            max-width: 100%;
+        } 
         .heading {
             display: block;
         }       
@@ -148,6 +188,10 @@ body {
     }
     .main-bio.is-active {
         width: 180%;  
+        @media screen and(max-width: 768px) {
+            flex-basis: 100%;
+            max-width: 100%;
+        } 
         .letter {
             display: none;
         }
@@ -167,14 +211,21 @@ body {
                
             }
             .list-item {
-                margin-bottom: .5rem;
+                margin-bottom: 1rem;
                 margin-right: 1.5rem;
+                &:last-of-type {
+                    margin-top: 3.5rem;
+                }
             }
         }       
     }
     // Contact
     .main-contact {
         transition: width 400ms;
+        @media screen and(max-width: 768px) {
+            flex-basis: 100%;
+            max-width: 100%;
+         } 
         .letter {
             display: block;
         }
@@ -184,6 +235,10 @@ body {
     }
     .main-contact.is-active {
         width: 180%;
+        @media screen and(max-width: 768px) {
+            flex-basis: 100%;
+            max-width: 100%;
+        } 
         .letter {
             display: none;
         }
@@ -212,53 +267,53 @@ body {
     }  
 }
 // Media queries
-@media screen and(max-width: 1440px) {
-    .header__wrapper {
-        .header__box {
-            width: 27%;
-        }
-    }
-}
-@media screen and(max-width: 500px) {
-    .header {
-        height: auto;
-        flex-direction: column;   
-        align-items: center;   
-        .header__name {
-            padding-left: 0;
-            width: 100%;
-        } 
-        .header-box {
-            text-align: center;
-            width: 50%;    
+// @media screen and(max-width: 1440px) {
+//     .header__wrapper {
+//         .header__box {
+//             width: 27%;
+//         }
+//     }
+// }
+// @media screen and(max-width: 500px) {
+//     .header {
+//         height: auto;
+//         flex-direction: column;   
+//         align-items: center;   
+//         .header__name {
+//             padding-left: 0;
+//             width: 100%;
+//         } 
+//         .header-box {
+//             text-align: center;
+//             width: 50%;    
            
-            .circle-text {
-                max-width: 200px;
-                margin-left: 0;
-            } 
-        }
-    }
-    .main {
-        height: auto;          
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        .main-work {
-            border-right: none;
-        }    
-        .main-work.is-active {
-            width: 100%;
-        }
-        .main-bio {
-            border-right: none;
-        }   
-        .main-bio.is-active {
-            width: 100%;  
-        }   
-        .main-contact.is-active {
-            width: 100%;
-        }
+//             .circle-text {
+//                 max-width: 200px;
+//                 margin-left: 0;
+//             } 
+//         }
+//     }
+//     .main {
+//         height: auto;          
+//         flex-direction: column;
+//         align-items: flex-start;
+//         width: 100%;
+//         .main-work {
+//             border-right: none;
+//         }    
+//         .main-work.is-active {
+//             width: 100%;
+//         }
+//         .main-bio {
+//             border-right: none;
+//         }   
+//         .main-bio.is-active {
+//             width: 100%;  
+//         }   
+//         .main-contact.is-active {
+//             width: 100%;
+//         }
     
-    } 
-}
+//     } 
+// }
 
