@@ -61,6 +61,7 @@ body {
     .header-box--2 {
         flex-basis: 15%;
         max-width: 15%;  
+        overflow: hidden;
         @media screen and(max-width: 768px) {
             flex-basis: 100%;
             max-width: 100%; 
